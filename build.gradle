@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'com.adarshr.test-logger' version '3.1.0'
+}
+
+group = 'com.hamuk'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.26.0'
+}
+
+test {
+    useJUnitPlatform()
+
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+        showStandardStreams = true
+    }
+}
+
+testlogger {
+    theme 'mocha'
+    slowThreshold 1000
+}
