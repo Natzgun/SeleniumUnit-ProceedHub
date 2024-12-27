@@ -31,7 +31,6 @@ public class RegisterTest {
 
         WebElement username = driver.findElement(By.name("username"));
         WebElement email = driver.findElement(By.name("email"));
-        WebElement career = driver.findElement(By.name("career"));
         WebElement password = driver.findElement(By.name("password"));
         WebElement submit = driver.findElement(By.tagName("button"));
 
@@ -39,7 +38,6 @@ public class RegisterTest {
 
         username.sendKeys("Melany");
         email.sendKeys(registeredEmail);
-        career.sendKeys("Ciencia de la Computacion");
         password.sendKeys("123456");
         submit.click();
 
@@ -59,7 +57,6 @@ public class RegisterTest {
 
         WebElement username = driver.findElement(By.name("username"));
         WebElement email = driver.findElement(By.name("email"));
-        WebElement career = driver.findElement(By.name("career"));
         WebElement password = driver.findElement(By.name("password"));
         WebElement submit = driver.findElement(By.tagName("button"));
 
@@ -67,7 +64,6 @@ public class RegisterTest {
 
         username.sendKeys("Melany");
         email.sendKeys(existingEmail);
-        career.sendKeys("Ciencia de la Computacion");
         password.sendKeys("123456");
         submit.click();
 
